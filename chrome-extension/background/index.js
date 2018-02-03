@@ -1,13 +1,14 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    const { permalink } = request;
+    const tweet = request.tweet
+    const { permalink } = tweet;
 
     if (permalink) {
       chrome.storage.sync.get({ readingList: []}, function (result) {
         const { readingList } = result;
 
         if (!readingList.includes(permalink)) {
-          readingList.push(permalink);
+          readingList.push(tweet);
         }
 
         console.log(readingList);

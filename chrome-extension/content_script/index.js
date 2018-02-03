@@ -67,8 +67,9 @@ function createReadingListButton(tweet) {
 
   div.onclick = () => {
     const permalink = `https://twitter.com${tweet.dataset.permalinkPath}`;
+    const text = tweet.querySelector('.tweet-text').innerText;
 
-    chrome.runtime.sendMessage({ permalink }, (response) => {
+    chrome.runtime.sendMessage({ tweet: { permalink, text }}, (response) => {
       const icon = div.querySelector('span.Icon');
 
       icon.classList.remove('Icon--add');

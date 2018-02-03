@@ -1,5 +1,5 @@
 <ul>
-  {{#each list as |permalink|}}
-    <li><a href="{{permalink}}" {{action "openPermalink" permalink}}>{{permalink}}</a></li>
+  {{#each list as |tweet|}}
+    <li><a href="{{tweet.permalink}}" {{action "openPermalink" tweet.permalink}}><p>{{tweet.text}}</p></a></li>
   {{/each}}
 </ul>
