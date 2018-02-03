@@ -18,5 +18,8 @@
       "matches": ["https://twitter.com/*"],
       "js": ["content_script/index.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background/index.js"]
+  }
 }
