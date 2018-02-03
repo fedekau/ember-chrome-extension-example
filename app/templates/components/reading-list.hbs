@@ -1,0 +1,5 @@
+<ul>
+  {{#each list as |permalink|}}
+    <li><a href="{{permalink}}" {{action "openPermalink" permalink}}>{{permalink}}</a></li>
+  {{/each}}
+</ul>
