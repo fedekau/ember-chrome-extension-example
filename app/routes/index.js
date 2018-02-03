@@ -7,5 +7,11 @@ export default Route.extend({
 
   model() {
     return this.get('readingList').list();
+  },
+
+  actions: {
+    clear() {
+      this.get('readingList').clear().then(() => this.refresh());
+    }
   }
 });
