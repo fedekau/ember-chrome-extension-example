@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "ember-chrome-extension-example",
-  "description": "This is an example chrome extension built with ember. If you go to twitter.com it will highlight tweets with more than 10 likes and save the links so you can take a look at them later.",
+  "description": "This is an example chrome extension built with ember. If you go to twitter.com it allows you to save the tweets so you can take a look at them later.",
   "version": "1.0",
 
   "browser_action": {
